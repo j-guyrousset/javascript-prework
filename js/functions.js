@@ -4,13 +4,13 @@ function printMessage(msg){
   document.getElementById('messages').appendChild(div);
 }
 
+
 function clearMessages(){
   document.getElementById('messages').innerHTML='';
 }
 
 
 function getMoveName(num){
-  console.log('function getMove used');
   let move = 'unknown choice, please try again.';
   if (num == 1){
     move = 'paper';
@@ -25,10 +25,9 @@ function getMoveName(num){
 
 
 function getResult(compMove, playMove){
-  console.log('fuction getResult used.');
   let game = compMove + '-' + playMove;
   let result = "undefined choice, try again but don't you cheat me...";
-  console.log(game);
+  console.log('computer - player: ' + game);
 
   if (compMove == playMove){
     result = "I chose " + compMove + " too, let's play again!";

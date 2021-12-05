@@ -1,11 +1,13 @@
-let randomNumber = Math.floor(Math.random()*3+1);
-let computerMove = getMoveName(randomNumber);
-console.log('computer random nuber is: ' + randomNumber +
-' - computer move is: ' + computerMove);
+function playGame(playerInput){
+  clearMessages();
 
-let playerInput = prompt("Please make your choice! 1: paper, 2: stone, 3: scissors. I am waiting...");
-let playerMove = getMoveName(playerInput);
-console.log('player choice: ' + playerInput +
-' - player move is: ' + playerMove);
+  let randomNumber = Math.floor(Math.random()*3+1);
+  let computerMove = getMoveName(randomNumber);
+  let playerMove = getMoveName(playerInput);
 
-getResult(computerMove, playerMove);
+  getResult(computerMove, playerMove);
+}
+
+document.getElementById('paper-button').addEventListener('click', function(){playGame(1)});
+document.getElementById('stone-button').addEventListener('click', function(){playGame(2)});
+document.getElementById('scissors-button').addEventListener('click', function(){playGame(3)});
