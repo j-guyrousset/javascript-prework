@@ -1,3 +1,6 @@
+let compCount = 0;
+let playerCount = 0;
+
 function printMessage(msg){
   let div = document.createElement('div');
   div.innerHTML = msg;
@@ -5,8 +8,25 @@ function printMessage(msg){
 }
 
 
+function printCountById(msg, id){
+  document.getElementById(id).innerHTML='';
+  let div = document.createElement('div');
+  div.innerHTML = msg;
+  document.getElementById(id).appendChild(div);
+}
+
+
 function clearMessages(){
   document.getElementById('messages').innerHTML='';
+}
+
+
+function resetCount(){
+  clearMessages();
+  compCount = 0;
+  playerCount = 0;
+  printCountById(compCount, 'comp-count');
+  printCountById(compCount, 'player-count');
 }
 
 
@@ -33,11 +53,15 @@ function getResult(compMove, playMove){
     result = "I chose " + compMove + " too, let's play again!";
     console.log("draw");
   } else if (game == 'paper-stone' || game == 'scissors-paper' || game == 'stone-scissors'){
-    result = "I have " + compMove + " you have " + playMove + ". I win, you loose.";
-    console.log('computer wins.');
-  } else if (game == 'stone-paper' || game == 'paper-scissors' || game == 'scissors-stone') {
-    result = "I have " + compMove + " you have " + playMove + ". You win this time, let's play again!";
-    console.log('player wins.');
+    result = "I have " + compMove + ", you have " + playMove + ". I win, you loose.";
+    compCount += 1;
+    console.log('computer wins - score: ' + compCount);
+    printCountById(compCount, 'comp-count');
+  } else if (game == 'stone-paper' || game == 'paper-scissors' || game == 'scissors-stone'){
+    result = "I have " + compMove + ", you have " + playMove + ". You win this time, let's play again!";
+    playerCount += 1;
+    console.log('player wins - score: ' + playerCount);
+    printCountById(playerCount, 'player-count');
   }
   return printMessage(result);
 }

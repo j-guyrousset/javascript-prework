@@ -11,3 +11,5 @@ function playGame(playerInput){
 document.getElementById('paper-button').addEventListener('click', function(){playGame(1)});
 document.getElementById('stone-button').addEventListener('click', function(){playGame(2)});
 document.getElementById('scissors-button').addEventListener('click', function(){playGame(3)});
+
+document.getElementById('reset-button').addEventListener('click', function(){resetCount()});
