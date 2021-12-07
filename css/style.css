@@ -15,7 +15,7 @@ h1 {
 
 /*button*/
 button {
-  margin: 30px 50px;
+  margin: 30px 30px;
   color: #2ed195;
   font-size: 30px;
   font-weight: 600;
@@ -32,6 +32,7 @@ button:hover {
 }
 
 .result {
+  height: 40px;
   margin-top: 30px;
   font-size: 25px;
   font-weight: 800;
@@ -39,21 +40,24 @@ button:hover {
 
 .game-info {
   position: relative;
+  display: inline-block;
 }
 
 .game-info button {
   position: absolute;
   font-size: 25px;
   top: 70px;
-  left: 50px;
+  left: -250px;
   border-radius: 0;
 }
 
 .game-info .score-frame {
   text-align: center;
   position: absolute;
+  margin-left: 0px;
   top: 50px;
-  left: 450px;
+  border: 2px solid black;
+  width: 250px;
 }
 
 .game-info .score-frame h2 {
@@ -62,9 +66,14 @@ button:hover {
 
 .game-info .score-frame .player-score, .game-info .score-frame .comp-score {
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 20px 20px 20px;
   margin-top: 0;
 }
 
+.game-info .score-frame .player-score .count, .game-info .score-frame .comp-score .count {
+  background-color: #fff;
+  width: 50px;
+}
+
 /**/
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxVQUFBO0FBR0E7RUFDRSxzQkFBc0I7QUNEeEI7O0FES0EsT0FBQTtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQ0h4Qjs7QURLQztFQUNFLFdBQVc7QUNGZDs7QURJQSxTQUFBO0FBQ0E7RUFDRSxpQkFBaUI7RUFDakIsY0FsQmlCO0VBbUJqQixlQUFlO0VBQ2YsZ0JBQWU7RUFDZixpQkFBaUI7RUFDakIsNkJBQTZCO0VBQzdCLHlCQXhCa0I7RUF5QmxCLDBCQUEwQjtFQUMxQixvQkFBb0I7QUNEdEI7O0FESUE7RUFDRSx5QkE3QmlCO0VBOEJqQixZQUFZO0FDRGQ7O0FESUE7RUFDRSxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGdCQUFnQjtBQ0RsQjs7QURJQTtFQUNFLGtCQUFrQjtBQ0RwQjs7QURBQTtFQUdJLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsU0FBUztFQUNULFVBQVU7RUFDVixnQkFBZ0I7QUNDcEI7O0FEUkE7RUFVSSxrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxXQUFXO0FDRWY7O0FEZkE7RUFlTSxnQkFBZ0I7QUNJdEI7O0FEbkJBO0VBa0JNLHFCQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsYUFBYTtBQ0tuQjs7QUQwQkEsR0FBQSIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxVQUFBO0FBR0E7RUFDRSxzQkFBc0I7QUNEeEI7O0FES0EsT0FBQTtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHNCQUFzQjtBQ0h4Qjs7QURLQztFQUNFLFdBQVc7QUNGZDs7QURJQSxTQUFBO0FBQ0E7RUFDRSxpQkFBaUI7RUFDakIsY0FsQmlCO0VBbUJqQixlQUFlO0VBQ2YsZ0JBQWU7RUFDZixpQkFBaUI7RUFDakIsNkJBQTZCO0VBQzdCLHlCQXhCa0I7RUF5QmxCLDBCQUEwQjtFQUMxQixvQkFBb0I7QUNEdEI7O0FESUE7RUFDRSx5QkE3QmlCO0VBOEJqQixZQUFZO0FDRGQ7O0FESUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixnQkFBZ0I7QUNEbEI7O0FESUE7RUFDRSxrQkFBa0I7RUFDbEIscUJBQW9CO0FDRHRCOztBRERBO0VBSUksa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixTQUFTO0VBQ1QsWUFBWTtFQUNaLGdCQUFnQjtBQ0NwQjs7QURUQTtFQVlJLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCx1QkFBdUI7RUFDdkIsWUFBWTtBQ0NoQjs7QURsQkE7RUFtQk0sZ0JBQWdCO0FDR3RCOztBRHRCQTtFQXNCTSxxQkFBb0I7RUFDcEIsd0JBQXdCO0VBQ3hCLGFBQWE7QUNJbkI7O0FENUJBO0VBMEJRLHNCQUFzQjtFQUN0QixXQUFXO0FDTW5COztBRDBCQSxHQUFBIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
