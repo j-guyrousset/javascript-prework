@@ -10,8 +10,6 @@
       document.getElementById(id).appendChild(div);
     }
 
-
-
     const resetCount = function(){
       clearMessages();
       compCount = 0;
@@ -36,7 +34,7 @@
 
 
     const getResult = function(compMove, playMove){
-      let game = compMove + '-' + playMove,
+      const game = compMove + '-' + playMove;
        result = "undefined choice, try again but don't you cheat me...";
       console.log('computer - player: ' + game);
 
@@ -62,9 +60,9 @@
   const playGame = function(playerInput){
     clearMessages();
 
-    let randomNumber = Math.floor(Math.random()*3+1);
-    let computerMove = getMoveName(randomNumber);
-    let playerMove = getMoveName(playerInput);
+    const randomNumber = Math.floor(Math.random()*3+1),
+    computerMove = getMoveName(randomNumber),
+    playerMove = getMoveName(playerInput);
 
     getResult(computerMove, playerMove);
   }
