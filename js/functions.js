@@ -2,14 +2,14 @@
   let compCount = 0,
    playerCount = 0;
 
-  function printMessage(msg){
+  const printMessage = function(msg){
     const div = document.createElement('div');
     div.innerHTML = msg;
     document.getElementById('messages').appendChild(div);
   }
 
 
-  function printCountById(msg, id){
+  const printCountById = function(msg, id){
     document.getElementById(id).innerHTML='';
     const div = document.createElement('div');
     div.innerHTML = msg;
